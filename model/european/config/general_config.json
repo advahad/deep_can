@@ -1,0 +1,89 @@
+{
+  "running": {
+    "architecture_name": "fcn_only",
+    "concat_ae": true,
+
+    "predict": true,
+    "generate_train_test_val_sets": false,
+    "generate_target_label_encoder": false,
+    "generate_tsfresh_test_one_file": false,
+    "generate_tsfresh_aggregation_set": false,
+
+    "train": {
+      "ae": false,
+      "fcn": false,
+      "tsfresh": false,
+      "meta_learner": true
+    },
+    "is_over": "under"
+  },
+
+
+  "data": {
+    "scaler": "min_max",
+    "scaling_type": "together",
+    "pattern_features": true,
+    "gap": ""
+  },
+
+  "network": {
+    "epochs" : 1500,
+    "batch_size": 16,
+    "log_dir": "",
+    "initialize_weights_with_model": false,
+    "hist_file_name": "history.csv",
+    "duration_file_name": "duration.pickle",
+    "es_patience": 150
+  },
+
+  "partitioning": {
+    "sample_fraq": 0.5,
+    "type": "sid",
+    "under_sample": true,
+    "under_sample_sets": ["train", "val"],
+    "test_set_size": 0.1,
+    "vat_set_size": 0.2,
+    "load": true
+  },
+
+  "features": {
+    "remove_features":  [],
+    "keep_features": "all",
+    "non_features_cols": ["series_num", "vid", "sid", "fid_x", "t_x", "aug.road_type"],
+    "dummy": ["11", "281", "283", "452", "1158", "1159", "1160", "11_fft", "281_fft", "283_fft", "452_fft"]
+  },
+
+  "tsfresh_offline": {
+    "step": 200,
+
+    "meta_date_file_name": "samples_meta_data.csv",
+
+
+    "x_train_file_name": "x_train_extracted.csv",
+    "x_test_file_name": "x_train_extracted.csv",
+    "x_val_file_name": "x_train_extracted.csv",
+
+    "y_train_file_name" : "y_train_extracted.csv",
+    "y_test_file_name" : "y_test_extracted.csv",
+    "y_val_file_name" : "y_val_extracted.csv",
+
+    "kind_params_file_name": "kind_parmas.pickle",
+    "selected_features_file_name": "selected_features.pickle",
+
+    "xgboost_model_name": "best_xgboost.pickle"
+  },
+
+  "tsfresh_online": {
+    "x_NN_one_file_name": "x_as_one_file.csv",
+
+    "x_NN_tsfreshed_file_name": "x_tsfreshed.csv",
+    "y_NN_tsfreshed_file_name": "y_tsfreshed.csv",
+    "y_pred_file_name": "y_pred.csv",
+    "y_pred_proba_file_name": "y_pred_proba.csv"
+  }
+
+
+
+
+}
+

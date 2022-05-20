@@ -1,0 +1,71 @@
+{
+  "seq_size" : 200,
+  "step_size" : 25,
+  "task": "european",
+  "target": "aug.road_type",
+
+  "model_type": "CNN",
+
+  "preprocessed_data_dir": "separate/samples_standard_fft_3_cls_fe/",
+  "best_model_name": "separate/samples_standard_fft_3_cls_fe",
+
+
+  "best_model_path" : "../../../best_models/%(task)s/%(model_type)s/%(target)s/seq_%(seq_size)s_step_%(step_size)s/%(best_model_name)s.h5",
+
+
+  "windows_dir" : "../../../results/raw_preprocessing/windows/",
+  "base_data_dir": "%(windows_dir)sseq_%(seq_size)s_step_%(step_size)s/",
+
+  "samples_path":"%(base_data_dir)s%(preprocessed_data_dir)s",
+
+
+
+  "meta_data_dir_path": "%(base_data_dir)smeta_merged_labels_fe/",
+  "meta_data_file_name": "samples_meta_data.csv",
+  "meta_data_file_prefix": "samples_meta_data",
+
+  "partitioning_obj_file_name": "%(meta_data_dir_path)spartitioning_dict.pickle",
+  "target_label_encoder_path": "%(meta_data_dir_path)starget_label_encoder.pickle",
+
+
+  "test_sets_dir_path": "%(base_data_dir)stest_sets/",
+  "x_test_path" : "%(test_sets_dir_path)sx_test.pickle",
+
+  "y_test_path": "%(test_sets_dir_path)sy_test.csv",
+  "y_test_encoded_path" : "%(test_sets_dir_path)sy_test_encoded.csv",
+
+  "y_test_pred_path": "%(test_sets_dir_path)sy_pred.csv",
+
+  "y_test_pred_proba_path": "%(test_sets_dir_path)sy_pred_proba.csv",
+
+
+
+
+  "val_sets_dir_path": "%(base_data_dir)sval_sets/",
+  "x_val_path" : "%(val_sets_dir_path)sx_val.pickle",
+
+  "y_val_path": "%(val_sets_dir_path)sy_val.csv",
+  "y_val_encoded_path" : "%(val_sets_dir_path)sy_val_encoded.csv",
+
+  "y_val_pred_path": "%(val_sets_dir_path)sy_pred.csv",
+  "y_val_pred_proba_path": "%(val_sets_dir_path)sy_pred_proba.csv",
+
+
+  "train_sets_dir_path": "%(base_data_dir)strain_sets/",
+  "x_train_path" : "%(train_sets_dir_path)sx_train.pickle",
+
+  "y_train_path": "%(train_sets_dir_path)sy_train.csv",
+  "y_train_encoded_path" : "%(train_sets_dir_path)sy_train_encoded.csv",
+
+
+
+  "x_test_correct_preds_path": "%(test_sets_dir_path)sx_test_correct_preds.pickle",
+  "y_test_correct_preds_path": "%(test_sets_dir_path)sy_test_correct_preds.csv",
+
+
+
+  "plots_prefix": "../../../plots/%(task)s/%(model_type)s/",
+
+  "embedding_file_name" : "embedding.csv"
+
+}

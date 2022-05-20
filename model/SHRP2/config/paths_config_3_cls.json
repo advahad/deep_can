@@ -1,0 +1,67 @@
+{
+  "seq_size" : 100,
+  "step_size" : 1,
+  "target": "aug.road_type",
+
+
+  "preprocessed_data_dir": "together/samples_min_max_fft_3_cls_fe_pattern_extended/",
+  "best_model_name": "best.h5",
+
+  "tsfresh_preprocessed_data_dir": "samples_extended_union/",
+
+  "windows_dir" : "../../../data_SHRP2/windows/",
+  "base_data_dir": "%(windows_dir)sseq_%(seq_size)s_step_%(step_size)s/",
+
+  "samples_path":"%(base_data_dir)s%(preprocessed_data_dir)s",
+  "ts_fresh_samples_path": "%(base_data_dir)s%(tsfresh_preprocessed_data_dir)s",
+
+
+
+  "meta_data_dir_path": "%(base_data_dir)smeta/",
+  "meta_data_file_name": "samples_meta_data.csv",
+  "meta_data_file_prefix": "samples_meta_data",
+
+  "partitioning_obj_file_name": "partitioning_dict.pickle",
+  "target_label_encoder_file_name": "target_label_encoder.pickle",
+
+  "ts_fresh_online_raw_samples_main_path": "%(base_data_dir)s/'.format(SEQ, STEP)",
+
+
+
+  "x_test_file_name" : "x_test.pickle",
+
+  "y_test_file_name": "y_test.csv",
+  "y_test_encoded_file_name" : "y_test_encoded.csv",
+  "y_test_pred_file_name": "y_pred.csv",
+  "y_test_pred_encoded_file_name": "y_pred_ecncoded.csv",
+  "y_test_pred_proba_file_name": "y_pred_proba.csv",
+
+
+  "x_val_file_name" : "x_val.pickle",
+  "y_val_file_name": "y_val.csv",
+  "y_val_encoded_file_name" : "y_val_encoded.csv",
+
+  "y_pred_file_name": "y_pred.csv",
+  "y_pred_encoded_file_name": "y_pred_ecncoded.csv",
+  "y_pred_proba_file_name": "y_pred_proba.csv",
+
+
+  "x_train_file_name" : "x_train.pickle",
+  "y_train_file_name": "y_train.csv",
+  "y_train_encoded_file_name" : "y_train_encoded.csv",
+
+
+
+
+
+  "x_test_correct_preds_file_name": "x_test_correct_preds.pickle",
+  "y_test_correct_preds_file_name": "y_test_correct_preds.csv",
+
+  "meta_learner_best_model_name": "meta_best.pickle",
+
+  "embedding_file_name" : "embedding.csv"
+
+
+
+
+}
