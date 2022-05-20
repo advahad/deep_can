@@ -1,5 +1,9 @@
 # deep_can
 Code implementation of paper: DeepCAN: Hybrid Method for Road Type Classification Using Vehicle Sensor Data for Smart Autonomous Mobility
+SHRP2 dataset' sample can be found here: https://insight.shrp2nds.us/
+The european dataset is proprietary and cannot be shared due to privacy issues
+
+
 Usually, image- and radar-based data are used
 to perform environmental characteristics related tasks in au-
 tonomous cars, while the use of sensor data from the Controller
